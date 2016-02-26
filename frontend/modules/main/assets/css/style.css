@@ -1,0 +1,69 @@
+@charset "UTF-8";
+h2 {
+  text-align: center;
+  text-transform: uppercase; }
+
+/* ╨Т╤Б╨╡ ╨╡╤Й╨╡ ╨╜╨╡ ╤А╨╡╤И╨╕╨╗╨╕╤Б╤М ╨╛╤В╨┤╨░╤В╤М ╤Б╨▓╨╛╨╡ ╨░╨▓╤В╨╛ ╨▓ ╤Б╨╡╤А╨▓╨╕╤Б? */
+.privilege .fa {
+  padding: 0 10px 0 10px; }
+.privilege h2 {
+  color: #004a77;
+  text-shadow: 0px 1px 1px #fff;
+  letter-spacing: 2px;
+  margin-bottom: 40px; }
+.privilege .rq {
+  text-align: right; }
+  .privilege .rq > div {
+    display: inline-block; }
+.privilege .ra {
+  text-align: left; }
+  .privilege .ra > div {
+    display: inline-block; }
+
+/* ╨Я╨╛╤З╨╡╨╝╤Г 3000 ╨╜╨░╤И╨╕╤Е ╨║╨╗╨╕╨╡╨╜╤В╨╛╨▓ ╨▓╤Л╨▒╤А╨░╨╗╨╛ ╨╜╨░╤Б?? */
+.advantages {
+  background-color: #00a7d0;
+  color: #fff; }
+  .advantages h2 {
+    padding: 10px 0 50px 0;
+    font-size: 44px;
+    line-height: 44px;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.38), 2px 2px 2px #d27a03; }
+  .advantages span {
+    color: #0a2b1d;
+    display: block;
+    line-height: 24px;
+    font-family: "Tahoma", "sans-serif";
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .advantages .w1 {
+    background: url("../images/w1.png") no-repeat top center;
+    text-align: center;
+    padding: 175px 0 30px 0; }
+  .advantages .w2 {
+    background: url("../images/w2.png") no-repeat top center;
+    text-align: center;
+    padding: 175px 0 30px 0; }
+  .advantages .w3 {
+    background: url("../images/w3.png") no-repeat top center;
+    text-align: center;
+    padding: 175px 0 30px 0; }
+  .advantages .w4 {
+    background: url("../images/w4.png") no-repeat top center;
+    text-align: center;
+    padding: 175px 0 30px 0; }
+  .advantages .w5 {
+    background: url("../images/w5.png") no-repeat top center;
+    text-align: center;
+    padding: 175px 0 30px 0; }
+  .advantages .w6 {
+    background: url("../images/w6.png") no-repeat top center;
+    text-align: center;
+    padding: 175px 0 30px 0; }
+  .advantages .w7 {
+    background: url("../images/w7.png") no-repeat top center;
+    text-align: center;
+    padding: 175px 0 30px 0; }
+
+/*# sourceMappingURL=style.css.map */

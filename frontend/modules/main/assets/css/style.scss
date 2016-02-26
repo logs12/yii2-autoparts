@@ -1,0 +1,65 @@
+h2{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Все еще не решились отдать свое авто в сервис? */
+.privilege{
+  .fa{
+    padding:0 10px 0 10px;
+  }
+  h2{
+    color: #004a77;
+    text-shadow: 0px 1px 1px #fff;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+  .rq{
+    text-align: right;
+    > div{
+      display: inline-block;
+    }
+  }
+  .ra{
+    text-align: left;
+    > div{
+      display: inline-block;
+    }
+  }
+}
+
+
+
+/* Почему 3000 наших клиентов выбрало нас?? */
+.advantages{
+  background-color: #00a7d0;
+  color: #fff;
+  h2{
+    padding: 10px 0 50px 0;
+    font-size: 44px;
+    line-height: 44px;
+    text-shadow: 0px 2px 1px rgba(0,0,0,0.38), 2px 2px 2px #d27a03;
+  }
+  @mixin advantages-image($i){
+    background: url('../images/w' + $i + '.png') no-repeat top center;
+    text-align: center;
+    padding: 175px 0 30px 0;
+  }
+  span {
+    color: #0a2b1d;
+    display: block;
+    line-height: 24px;
+    font-family: "Tahoma", "sans-serif";
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .w1{@include advantages-image(1)}
+  .w2{@include advantages-image(2)}
+  .w3{@include advantages-image(3)}
+  .w4{@include advantages-image(4)}
+  .w5{@include advantages-image(5)}
+  .w6{@include advantages-image(6)}
+  .w7{@include advantages-image(7)}
+}
+
