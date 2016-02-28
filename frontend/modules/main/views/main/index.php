@@ -9,9 +9,30 @@ AnimateAsset::register($this);
 $this->title = 'My Yii Application';
 ?>
 
-<div class="work-done" xmlns="http://www.w3.org/1999/html"
-     xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-    <h2>Сделано:</h2>
+<button class="btn btn-success callback"  data-toggle="modal" data-target="#callbackpop"
+        entity="Заявка с кнопки обратного звонка в шапке">
+    Заказать звонок
+</button>
+
+<div class="counts">
+    <div class="container">
+        <div class="col-sm-12 col-md-3 c1">
+            <span>10</span>
+            <div>высококлассных специалистов, имеющих мировые сертификаты</div>
+        </div>
+        <div class="col-sm-12 col-md-4 c2">
+            <span>5239</span>
+            <span>клиентов уже выбрали нас и остались довольны</span>
+        </div>
+        <div class="col-sm-12 col-md-2 c3">
+            <span>7</span>
+            <span>лет успешных работ по авторемонту</span>
+        </div>
+        <div class="col-sm-12 col-md-3 c4">
+            <span>12</span>
+            <span>месяцев гарантии на все выполненные работы</span>
+        </div>
+    </div>
 </div>
 
 <div class="privilege">
@@ -19,58 +40,110 @@ $this->title = 'My Yii Application';
         <h2>Все еще не решились отдать свое авто в сервис?</h2>
 
         <section class="rq col-sm-12 col-md-6">
-            <div>Боитесь, что при обращении вам назовут одну<br>цену, а после ремонта – другую?</div>
-            <i class="fa fa-question fa-4x"></i>
+            <table>
+                <tr>
+                    <td>
+                        <div>Боитесь, что при обращении вам назовут одну цену,
+                            а после ремонта – другую?</div>
+                    </td>
+                    <td><i class="fa fa-question fa-4x"></i></td>
+                </tr>
+            </table>
         </section>
         <section class="ra col-sm-12 col-md-6">
-            <i class="fa fa-exclamation fa-4x"></i>
-            <div>
-                <span>Прозрачная цена</span>
-                Цена на покраску и ремонтные работы останется<br>неизменной - без дополнительных затрат<br>и наценок на детали.
-            </div>
+            <table>
+                <tr>
+                    <td> <i class="fa fa-exclamation fa-4x"></i></td>
+                    <td><span>Прозрачная цена</span>
+                        Цена на покраску и ремонтные работы останется неизменной
+                        - без дополнительных затрат<br>и наценок на детали.
+                    </td>
+                </tr>
+            </table>
         </section>
        <div class="clearfix"></div>
         <section class="rq col-sm-12 col-md-6">
-            <div>Необходим срочный<br>ремонт авто после аварии?</div>
-            <i class="fa fa-question fa-4x"></i>
+            <table>
+                <tr>
+                    <td>Необходим срочный ремонт авто после аварии?</td>
+                    <td><i class="fa fa-question fa-4x"></i></td>
+                </tr>
+            </table>
         </section>
         <section class="ra col-sm-12 col-md-6">
-            <i class="fa fa-exclamation fa-4x"></i>
-            <div><span>Срочный ремонт</span>
-            Все работы по ремонту и покраске вашего авто<br>будут выполены в срок от 1 до 7 дней в зависимости<br>от сложности.</div>
+            <table>
+                <tr>
+                    <td><i class="fa fa-exclamation fa-4x"></i></td>
+                    <td>
+                        <span>Срочный ремонт</span>
+                        Все работы по ремонту и покраске вашего авто
+                        будут выполены в срок от 1 до 7 дней в зависимости от сложности.
+                    </td>
+                </tr>
+            </table>
         </section>
         <div class="clearfix"></div>
         <section class="rq col-sm-12 col-md-6">
-            <div>Квалификация работников<br>автосервисов вызывает у вас сомнения?</div>
-            <i class="fa fa-question fa-4x"></i>
+            <table>
+                <tr>
+                    <td>Квалификация работников автосервисов вызывает у вас сомнения?</td>
+                    <td><i class="fa fa-question fa-4x"></i></td>
+                </tr>
+            </table>
         </section>
         <section class="ra col-sm-12 col-md-6">
-            <i class="fa fa-exclamation fa-4x"></i>
-            <div><span>Только опытные сотрудники</span>
-            Специалисты нашего сервиса – профессионалы<br>с опытом работы более 10 лет в сфере покраски и ремонта авто.</div>
+            <table>
+                <tr>
+                    <td> <i class="fa fa-exclamation fa-4x"></i></td>
+                    <td>
+                        <span>Только опытные сотрудники</span>
+                        Cпециалисты нашего сервиса – профессионалы
+                        с опытом работы более 10 лет в сфере покраски и ремонта авто.
+                    </td>
+                </tr>
+            </table>
         </section>
         <div class="clearfix"></div>
         <section class="rq col-sm-12 col-md-6">
-            <div>Появилось желание<br>обновить внешний вид авто?</div>
-            <i class="fa fa-question fa-4x"></i>
+            <table>
+                <tr>
+                    <td>Появилось желание обновить внешний вид авто?</td>
+                    <td><i class="fa fa-question fa-4x"></i></td>
+                </tr>
+            </table>
         </section>
         <section class="ra col-sm-12 col-md-6">
-            <i class="fa fa-exclamation fa-4x"></i>
-            <div><span>Безупречный вид авто надолго</span>
-            Мы работаем только с проверенными<br>брендами-производителями лакокрасочных<br>покрытий из Америки и Германии, чья надежность<br>проверена годами!
-            </div>
+            <table>
+                <tr>
+                    <td><i class="fa fa-exclamation fa-4x"></i></td>
+                    <td>
+                        <span>Безупречный вид авто надолго</span>
+                        Мы работаем только с проверенными брендами-производителями лакокрасочных
+                        покрытий из Америки и Германии, чья надежность проверена годами!
+                    </td>
+                </tr>
+            </table>
         </section>
         <div class="clearfix"></div>
         <section class="rq col-sm-12 col-md-6">
-            <div>Хотите гарантий на все<br>выполненные работы?</div>
-            <i class="fa fa-question fa-4x"></i>
+            <table>
+                <tr>
+                    <td>Хотите гарантий на все выполненные работы?</td>
+                    <td><i class="fa fa-question fa-4x"></i></td>
+                </tr>
+            </table>
         </section>
         <section class="ra col-sm-12 col-md-6">
-            <i class="fa fa-exclamation fa-4x"></i>
-            <div><span>Безупречный вид авто надолго</span>
-            <span>Гарантия 12 месяцев</span>
-            Мы предоставляем гарантию 12 месяцев<br>на все покрасочные и ремонтные работы.
-            </div>
+            <table>
+                <tr>
+                    <td><i class="fa fa-exclamation fa-4x"></i></td>
+                    <td><span>Безупречный вид авто надолго</span>
+                        <span>Гарантия 12 месяцев</span>
+                        Мы предоставляем гарантию 12 месяцев
+                        на все покрасочные и ремонтные работы.
+                    </td>
+                </tr>
+            </table>
         </section>
         <div class="clearfix"></div>
 
@@ -114,7 +187,34 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
-
+<div class="services">
+    <h2>Как мы работаем:</h2>
+    <div class="wrap scroll-animate animate">
+        <div class="hww_one hb s1 scale">
+            <div class="hww_text">
+                <span>ЗАЯВКА</span>
+                Вы оставляете заявку <br>на обратный звонок <br>или звоните нам сами
+                <a id="go" class="button-callback" rel="leanModal" name="makeorder" >Оставить заявку</a>
+            </div>
+        </div>
+        <div class="hww_one ht s2 scale">
+            <span>КОНСУЛЬТАЦИЯ</span>
+            Вы получаете от нашего специалиста<br>индивидуальное предложение, уточняете<br>сумму и сроки выполнения работ
+        </div>
+        <div class="hww_one hb s3 scale">
+            <span>ОБРАЩЕНИЕ В POKRAS24</span>
+            Вы приезжаете в наш сервис, наш<br>специалист проводит осмотр автомобиля <br>и согласовывает стоимость работы
+        </div>
+        <div class="hww_one ht s4 scale">
+            <span>РЕМОНТНЫЕ РАБОТЫ</span>
+            Мы проводим полный цикл<br>покрасочных и ремонтных<br>работ
+        </div>
+        <div class="hww_one hb s5 scale">
+				<span>АВТОМОБИЛЬ ГОТОВ!</span>
+            Покраска завершена!<br>Можете ехать!
+        </div>
+    </div>
+</div>
 <div class="services">
     <h2>Виды предоставляемых услуг:</h2>
 </div>

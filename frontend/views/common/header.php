@@ -41,12 +41,12 @@
             <div class="collapse navbar-collapse" id="bs-navbar-main">
                 <?
                 $menuItems = [
-                    ['label' => 'Главная <i class="fa fa-home fa-1x"></i>', 'url' => ['/site/index']],
-                    ['label' => 'О нас <i class="fa fa-question fa-1x"></i>', 'url' => ['/site/about']],
-                    ['label' => 'Каталог запчастей <i class="fa fa-car fa-1x"></i>', 'url' => ['/site/about']],
-                    ['label' => 'Достижения <i class="fa fa-tasks fa-1x"></i>', 'url' => ['/site/about']],
-                    ['label' => 'Отзывы <i class="fa fa-commenting-o fa-1x"></i>', 'url' => ['/site/about']],
-                    ['label' => 'Схема проезда <i class="fa fa-map-marker fa-1x"></i>', 'url' => ['/site/contact']],
+                    ['label' => '<i class="fa fa-home fa-1x"></i> Главная', 'url' => ['/site/index']],
+                    ['label' => '<i class="fa fa-question fa-1x"></i> О нас', 'url' => ['/site/about']],
+                    ['label' => '<i class="fa fa-car fa-1x"></i> Каталог запчастей', 'url' => ['/site/about']],
+                    ['label' => '<i class="fa fa-tasks fa-1x"></i> Достижения', 'url' => ['/site/about']],
+                    ['label' => '<i class="fa fa-commenting-o fa-1x"></i> Отзывы', 'url' => ['/site/about']],
+                    ['label' => '<i class="fa fa-map-marker fa-1x"></i> Схема проезда', 'url' => ['/site/contact']],
                 ];
                 echo Nav::widget([
                     'encodeLabels' => false,
