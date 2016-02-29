@@ -5,6 +5,16 @@ h2{
   text-transform: uppercase;
 }
 
+/* главный баннер */
+.main_banner{
+    .timer_block{
+
+    }
+    .order_block{
+
+    }
+}
+
 
 /* как мы работаем */
   .services {
@@ -13,9 +23,7 @@ h2{
       height: 315px;
       background: url(../images/hww.png) no-repeat center 115px;
     }
-    h2 {
-      margin-bottom:55px;
-    }
+    h2 {margin-bottom:55px;}
 
     .wrap {
       position:relative;
@@ -60,39 +68,23 @@ h2{
       padding-bottom:65px;
     }
 
-    .s1 {
-      position:absolute;
-      top:102px;
-      padding-top:43px;
+    @mixin s($top, $left, $padding-top){
+        position:absolute;
+        top:$top;
+        left: $left;
+        @if $padding-top !=0 {
+            padding-top: $padding-top;
+        }
     }
-
-    .s2 {
-      position:absolute;
-      top:1px;
-      left:130px;
-    }
-
-    .s3 {
-      position:absolute;
-      top:103px;
-      left:340px;
-    }
-
-    .s4 {
-      position:absolute;
-      top:1px;
-      left:590px;
-    }
-
-    .s5 {
-      position:absolute;
-      top:103px;
-      right:45px;
-    }
+    .s1 {@include s(102px,0,43px);}
+    .s2 {@include s(1px,130px,0);}
+    .s3 {@include s(103px,340px,0);}
+    .s4 {@include s(1px,590px,0);}
+    .s5 {@include s(103px,710px,0);}
   }
 
   /* счетчик выполненных работ */
-  .counts{
+.counts{
     background-color:$background-color-container;
     padding:15px 0;
     .container > div {
@@ -108,10 +100,10 @@ h2{
       line-height: 0.9em;
       padding-right: 10px;
     }
-  }
+}
 
   /* Все еще не решились отдать свое авто в сервис? */
-  .privilege{
+.privilege{
     .fa{
       color: #FF0000;
       text-shadow: 1px 1px #FF0000;
@@ -138,10 +130,10 @@ h2{
     .ra{
       text-align: left;
     }
-  }
+}
 
   /* Почему 3000 наших клиентов выбрало нас?? */
-  .advantages{
+.advantages{
     background-color: $background-color-container;
     color: #fff;
     h2{
@@ -171,7 +163,7 @@ h2{
     .w5{@include advantages-image(5)}
     .w6{@include advantages-image(6)}
     .w7{@include advantages-image(7)}
-  }
+}
 
 
 .button-callback {

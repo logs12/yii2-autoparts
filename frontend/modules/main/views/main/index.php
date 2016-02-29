@@ -9,10 +9,15 @@ AnimateAsset::register($this);
 $this->title = 'My Yii Application';
 ?>
 
-<div>
-    <span>Оставьте заявку</span>
-    и получите<br><b>купон на 1 000 руб.</b><br>на все виды услуг
-    <?php echo app\modules\callback\widgets\Callback::widget(['typeView' => 'simpleForm']);?>
+<div class="main_banner">
+    <img class="img-responsive" src="../../assets/images/main.jpg">
+    <div class="timer_block">
+        <span>Оставьте заявку</span>
+        и получите<br><b>купон на 1 000 руб.</b><br>на все виды услуг
+    </div>
+    <div class="order_block">
+        <?php echo app\modules\callback\widgets\Callback::widget(['typeView' => 'simpleForm']);?>
+    </div>
 </div>
 
 <div class="counts">

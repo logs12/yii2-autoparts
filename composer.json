@@ -21,7 +21,9 @@
         "yiisoft/yii2-swiftmailer": "*",
         "bower-asset/font-awesome": "4.*",
         "dmstr/yii2-adminlte-asset": "2.*",
-        "zyx/zyx-phpmailer": "@stable"
+        "zyx/zyx-phpmailer": "@stable",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "yiisoft/yii2-imagine": "~2.0.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
