@@ -9,10 +9,11 @@ AnimateAsset::register($this);
 $this->title = 'My Yii Application';
 ?>
 
-<button class="btn btn-success callback"  data-toggle="modal" data-target="#callbackpop"
-        entity="Заявка с кнопки обратного звонка в шапке">
-    Заказать звонок
-</button>
+<div>
+    <span>Оставьте заявку</span>
+    и получите<br><b>купон на 1 000 руб.</b><br>на все виды услуг
+    <?php echo app\modules\callback\widgets\Callback::widget(['typeView' => 'simpleForm']);?>
+</div>
 
 <div class="counts">
     <div class="container">
@@ -189,7 +190,7 @@ $this->title = 'My Yii Application';
 </div>
 <div class="services">
     <h2>Как мы работаем:</h2>
-    <div class="wrap scroll-animate animate">
+    <div class="wrap container">
         <div class="hww_one hb s1 scale">
             <div class="hww_text">
                 <span>ЗАЯВКА</span>

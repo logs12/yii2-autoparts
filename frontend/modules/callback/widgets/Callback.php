@@ -12,11 +12,21 @@ use app\modules\callback\models\CallbackForm;
 class Callback extends Widget
 {
 
+    public $typeView;
+
+    public function init(){}
+
     public function run(){
 
         $model = new CallbackForm();
-        return $this->render('popup',
-            ['model'=>$model]
-        );
+
+        if ($this->typeView == 'popupForm')
+            return $this->render('popupForm',
+                ['model'=>$model]
+            );
+        elseif ($this->typeView == 'simpleForm')
+            return $this->render('simpleForm',
+                ['model'=>$model]
+            );
     }
 }

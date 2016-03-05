@@ -8,11 +8,11 @@ class CallbackAssets extends AssetBundle
 {
     public $sourcePath = '@app/modules/callback/assets';
     public $css = [
-        'css/callback.css'
+        'css/callbackPopup.css'
     ];
 
     public $js = [
-        'js/callback.js'
+        'js/callbackPopup.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

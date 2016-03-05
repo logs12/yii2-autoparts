@@ -9,32 +9,26 @@ jQuery(document).ready(function(){
     var entity = btn.attr('entity');
 
 
+    /* подгружаем содержимое форму в popup*/
     btn.click(function(event){
 
         event.preventDefault();
 
         var modalContainer = $('#callbackpop');
 
-        $.ajax({
-            url: 'callback/callback/get-form',
-            type: 'POST',
-            success: function (data) {
-                if (data){
-                    $('.modal-body').html(data);
-                    $('#callbackform-entity').val(entity);
-                    modalContainer.modal({show:true});
-                    afterSuccess();
-                }
-            }
-        });
+        $('#callbackform-entity').val(entity);
+        modalContainer.modal({show:true});
+        afterSuccess();
+
     });
 
+    /**
+     * отправка данных из формы на обработку в контроллер
+     */
     function afterSuccess(){
-        $('.callback-form').on('submit',function(event){
+        $('.modal-body').on('submit','.callback-form',function(event){
             event.preventDefault();
-
             var form = $(this);
-
             $.ajax({
                 url: 'callback/callback/callback',
                 type: 'POST',

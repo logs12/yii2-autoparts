@@ -15,7 +15,7 @@
                     <aside class="contacts">
                         <i class="fa fa-phone fa-2x"></i>
                         <span>(831) 220-97-15</span>
-                        <button class="btn btn-success callback"  data-toggle="modal" data-target="#callbackpop"
+                        <button class="btn btn-success callback"
                                 entity="Заявка с кнопки обратного звонка в шапке">
                             Заказать звонок
                         </button>
@@ -60,7 +60,7 @@
 
     <!-- #Nav Ends -->
     <!-- загружаем форму для popup окна-->
-    <?php echo app\modules\callback\widgets\Callback::widget();?>
+    <?php echo app\modules\callback\widgets\Callback::widget(['typeView' => 'popupForm']);?>
 </header>
 <div class="container">
     <?= Breadcrumbs::widget([
