@@ -5,7 +5,7 @@
 use frontend\assets\AnimateAsset;
 
 AnimateAsset::register($this);
-
+$this->registerJsFile('http://maps.google.com/maps/api/js');
 $this->title = 'My Yii Application';
 ?>
 
@@ -227,4 +227,61 @@ $this->title = 'My Yii Application';
 
 <div class="reviews">
     <h2>Отзывы наших клиентов:</h2>
+
+    <div class="wrap container">
+        <a name="reviews2"></a>
+        <div class="review r1 fade" style="opacity: 1;">
+            <div class="review_img"></div>
+            <img lass="review_img" src="<?Yii::$app->assetManager->getPublishedUrl('images/r1.png');?>">
+            <span>«Будет случай – обращусь к вам еще!»</span>
+            <p>Спасибо ребятам за отличную работу! Попал в аварию, разбил свою Audi, ужасная история!</p>
+            <p>Решился отдать на ремонт, очень переживал, боялся, что покрасят плохо, вкривь и вкось,<br>неудачно подберут цвет. <b>Результат очень порадовал, все сделали качественно и быстро.</b> Будет случай –<br>обращусь в Pokras24 еще! </p>
+            <p>Спасибо!</p>
+            <div class="review_name">
+                <div class="rn"></div>
+                <div class="rnn"></div>
+                <em>Эмиль Ворзаев, 43 года, Audi TT </em>
+            </div>
+        </div>
+        <a name="reviews3"></a>
+        <div class="review r2 fade" style="opacity: 1;">
+            <div class="review_img"></div>
+            <span>«Заплатил ровно ту сумму, которую назвали в начале...»</span>
+            <p>Весной решил обновить автомобиль – освежить цвет, убрать царапины по бокам.</p>
+            <p><b>После осмотра и диагностики авто назвали нормальную цену, я сразу согласился!</b> Покраска заняла всего три дня. Когда увидел машину, всё понравилось, заплатил ровно ту сумму, которую назвали в начале. Pokras24, спасибо за качественную работу!!!</p>
+            <div class="review_name">
+                <div class="rn"></div>
+                <div class="rnn"></div>
+                <em>Валентин Стародубов, 38 лет, Hyundai Accent</em>
+            </div>
+        </div>
+        <a name="reviews4"></a>
+        <div class="review r3 fade" style="opacity: 1;">
+            <div class="review_img"></div>
+            <span>«Уже через 4 дня я забрала машину...»</span>
+            <p>Долго искала сервис для ремонта машины, большинство компаний предлагают свои услуги по завышенным ценам, да еще и качество работ оставляет желать лучшего. <b>Цены адекватные и качество работы на высоком уровне.</b>
+                Что порадовало – все сделали быстро, уже через 4 дня я забрала машину. </p>
+            <p>Обратилась по совету подруги и не жалею! </p>
+            <div class="review_name">
+                <div class="rn"></div>
+                <div class="rnn"></div>
+                <em>Елена Рислова, 35лет, Mazda 6</em>
+            </div>
+        </div>
+        <a name="reviews5"></a>
+        <div class="review r4 fade" style="opacity: 1;">
+            <div class="review_img"></div>
+            <span>«Не только провели полную покраску авто, но и помогли <br>подобрать новые дверь и зеркала...»</span>
+            <p>Ремонтировал свой Cорент – вся левая сторона была разбита, что называется, «в мясо». Ребята не только провели полную покраску авто, но и помогли подобрать новые дверь и зеркала. </p>
+            <p><b>Работой остался очень доволен, качество отличное, буду рекомендовать друзьям, спасибо!</b></p>
+            <div class="review_name">
+                <div class="rn"></div>
+                <div class="rnn"></div>
+                <em>Андрей Томилин, 27 лет, KIA Sorento</em>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<div class="map" style="width:500px; height:500px">></div>

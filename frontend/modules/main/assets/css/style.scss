@@ -1,8 +1,16 @@
-$background-color-container: #00a7d0;
+//$background-color-container: #00a7d0;
+$background-color-container: #0174b7;
 
-h2{
-  text-align: center;
-  text-transform: uppercase;
+h2 {
+    font-size:48px;
+    line-height:48px;
+    color:#004a77;
+    text-align:center;
+    text-transform:uppercase;
+    text-shadow:0px 1px 1px #fff;
+    letter-spacing:2px;
+    margin-bottom:40px;
+    font-weight: bold;
 }
 
 /* главный баннер */
@@ -15,6 +23,27 @@ h2{
     }
 }
 
+/* счетчик выполненных работ */
+.counts{
+    background-color:$background-color-container;
+    padding:15px 0;
+    .container > div {
+        padding: 0;
+        height: 80px;
+        margin: 0 auto;
+        color: #fff;
+        text-shadow: 0px 1px 1px #00243e;
+    }
+    span:first-child{
+        font-size: 70px;
+        display: block;
+        float: left;
+        line-height: 0.9em;
+        padding-right: 10px;
+        color: #ff9524;
+        text-shadow: 0px 2px 1px rgba(0,0,0,0.38), 2px 2px 0px #d27a03;
+    }
+}
 
 /* как мы работаем */
   .services {
@@ -43,7 +72,6 @@ h2{
       text-transform:uppercase;
       color:#065c99;
       font-size:22px;
-      font-family:'pt_bold';
       line-height:22px;
     }
 
@@ -83,24 +111,7 @@ h2{
     .s5 {@include s(103px,710px,0);}
   }
 
-  /* счетчик выполненных работ */
-.counts{
-    background-color:$background-color-container;
-    padding:15px 0;
-    .container > div {
-      padding: 0;
-      height: 80px;
-      margin: 0 auto;
-    }
-    span{}
-    span:first-child{
-      font-size: 70px;
-      display: block;
-      float: left;
-      line-height: 0.9em;
-      padding-right: 10px;
-    }
-}
+
 
   /* Все еще не решились отдать свое авто в сервис? */
 .privilege{
@@ -137,10 +148,11 @@ h2{
     background-color: $background-color-container;
     color: #fff;
     h2{
-      padding: 10px 0 50px 0;
-      font-size: 44px;
-      line-height: 44px;
-      text-shadow: 0px 2px 1px rgba(0,0,0,0.38), 2px 2px 2px #d27a03;
+        padding: 10px 0 50px 0;
+        font-size: 44px;
+        line-height: 44px;
+        text-shadow: 0px 2px 1px rgba(0,0,0,0.38), 2px 2px 2px #d27a03;
+        color: #ff9524;
     }
     @mixin advantages-image($i){
       background: url('../images/w' + $i + '.png') no-repeat top center;
@@ -148,7 +160,7 @@ h2{
       padding: 175px 0 30px 0;
     }
     span {
-      color: #0a2b1d;
+      color: #ff9524;
       display: block;
       line-height: 24px;
       font-family: "Tahoma", "sans-serif";
@@ -156,6 +168,8 @@ h2{
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
+    b{color:#F3E4D1;}
     .w1{@include advantages-image(1)}
     .w2{@include advantages-image(2)}
     .w3{@include advantages-image(3)}
@@ -165,6 +179,157 @@ h2{
     .w7{@include advantages-image(7)}
 }
 
+/* Отзывы наших клиентов */
+
+.hww a {
+    display:block;
+    width:224px;
+    height:55px;
+    line-height:51px;
+    background:url(../images/hww_a.png) no-repeat 0px 0px;
+    font-size:20px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#fff;
+    text-shadow:0px 1px 0px #a86f05;
+    text-align:center;
+    margin:10px auto 0 auto;
+}
+
+.hww a:hover {
+    color:#661616;
+}
+
+.reviews {
+    background:#eaeaea;
+    padding:40px 0 20px 0;
+}
+
+.reviews h2 {
+    letter-spacing:4px;
+    margin-bottom:45px;
+}
+
+.review {
+    width:785px;
+    border-radius:6px;
+    background:#fff;
+    padding:18px 20px 20px 35px;
+    margin:0 0 55px 130px;
+    position:relative;
+    color:#3b3b3b;
+    font-size:16px;
+    line-height:20px;
+    z-index:2;
+}
+
+.review p {
+    margin-bottom:7px;
+}
+
+.review span {
+    display:block;
+    font-size:20px;
+    color:#065c99;
+    font-family:'pt_boldit';
+    text-align:center;
+    line-height:24px;
+    margin-bottom:10px;
+}
+
+.review_img {
+    width:140px;
+    height:141px;
+    position:absolute;
+    top:5px;
+}
+
+.r2, .r4 {
+    margin:0 0px 55px 10px;
+}
+
+.review_name {
+    background:#ffb001;
+    position:absolute;
+    height:37px;
+    border-radius:6px;
+    line-height:43px;
+    bottom:-31px;
+    padding:0 17px 0 15px;
+    z-index:1;
+    color:#fff;
+    font-family:'pt_boldit';
+    font-size:16px;
+    text-shadow:0px 1px 1px #ab7000;
+}
+
+.rn {
+    width:23px;
+    height:31px;
+    position:absolute;
+}
+
+.rnn {
+    width:380px;
+    height:6px;
+    position:absolute;
+    top:0px;
+    background:#fff;
+}
+
+.r2, .r4 {
+    padding:18px 35px 20px 20px;
+}
+
+.r1 .review_img {
+    background:url(../images/r1.png) no-repeat center;
+    left:-120px;
+}
+
+.r2 .review_img {
+    background:url(../images/r2.png) no-repeat center;
+    right:-120px;
+}
+
+.r3 .review_img {
+    background:url(../images/r3.png) no-repeat center;
+    left:-120px;
+}
+
+.r4 .review_img {
+    background:url(../images/r4.png) no-repeat center;
+    right:-120px;
+}
+
+.r1 .review_name, .r3 .review_name {
+    left:0px;
+}
+
+.r2 .review_name, .r4 .review_name {
+    right:0px;
+}
+
+.r1 .rn, .r3 .rn {
+    right:-20px;
+    top:6px;
+    background:url(../images/rn1.png) no-repeat center;
+}
+
+.r2 .rn, .r4 .rn {
+    left:-20px;
+    top:6px;
+    background:url(../images/rn2.png) no-repeat center;
+}
+
+.r1 .rnn, .r3 .rnn {
+    border-radius:0px 0px 0px 7px;
+    left:0px;
+}
+
+.r2 .rnn, .r4 .rnn {
+    border-radius:0px 0px 7px 0px;
+    right:0px;
+}
 
 .button-callback {
   display: block;
@@ -188,7 +353,6 @@ h2{
   //display: block;
   /* height: 55px; */
   font-size: 20px;
-  font-family: 'pt_bold';
   text-transform: uppercase;
   letter-spacing: 1px;
   /* color: #fff; */
