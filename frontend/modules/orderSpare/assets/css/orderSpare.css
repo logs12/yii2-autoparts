@@ -1,0 +1,22 @@
+#popap-spare .popap-spare-form {
+  padding-top: 20px; }
+#popap-spare .nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+  width: 50%; }
+#popap-spare .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-align: center; }
+#popap-spare .fa {
+  line-height: 34px; }
+#popap-spare form > div.required span {
+  color: red; }
+#popap-spare .loadImg {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 50px auto; }
+
+/*# sourceMappingURL=orderSpare.css.map */

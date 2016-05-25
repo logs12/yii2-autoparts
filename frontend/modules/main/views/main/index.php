@@ -3,24 +3,49 @@
 /* @var $this yii\web\View */
 
 use frontend\assets\AnimateAsset;
+use frontend\assets\MainAsset;
+use yii\helpers\Html;
+use app\widgets\countdown\Countdown;
 
 AnimateAsset::register($this);
-$this->registerJsFile('http://maps.google.com/maps/api/js');
+
+$MainAsset = new MainAsset;
+$pathMainAsset = Yii::$app->assetManager->getPublishedUrl($MainAsset->sourcePath);
+
 $this->title = 'My Yii Application';
 ?>
 
 <div class="main_banner">
-    <img class="img-responsive" src="../../assets/images/main.jpg">
-    <div class="timer_block">
-        <span>Оставьте заявку</span>
-        и получите<br><b>купон на 1 000 руб.</b><br>на все виды услуг
-    </div>
-    <div class="order_block">
-        <?php echo app\modules\callback\widgets\Callback::widget(['typeView' => 'simpleForm']);?>
+
+
+   <?/*= Html::img(
+            '@web'.$pathMainAsset.'/images/main.jpg',
+            ['class' => 'img-responsive','alt' => 'Наш логотип','width' => '100%']
+    ) */?>
+
+    <div class="container">
+        <h3>ремонт автомобилей</h3>
+        <h4>продажа автозапастей по выгодным ценам</h4>
+        <div class="row">
+            <div class="col-sm-12 col-md-6"></div>
+            <div class="col-sm-12 col-md-6">
+                <div class="simpleFormCallback">
+                    <div class="timer_block">
+                        <span>Оставьте заявку</span>
+                        и получите<br><b>купон на 1 000 руб.</b><br>на все виды услуг
+
+                    </div>
+                    <?= Countdown::widget()?>
+                    <div class="order_block">
+                        <?php echo logs12\callback\widgets\Callback::widget(['typeView' => 'simpleForm']);?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="counts">
+<!--<div class="counts">
     <div class="container">
         <div class="col-sm-12 col-md-3 c1">
             <span>10</span>
@@ -154,9 +179,226 @@ $this->title = 'My Yii Application';
         <div class="clearfix"></div>
 
     </div>
+</div>-->
+<div class="logotips">
+    <div class="container">
+        <div class="row">
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/ford.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/honda.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/hyundai.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/toyota.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/volvo.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/mazda.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/subaru.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/opel.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/chevrolet.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/volkswagen.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/cadillac.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/nissan.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/audi.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+            <section class="col-sm-12 col-md-2">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/logotips/bmw.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="service">
+    <div class="container">
+        <h2>Услуги автомобильного ремонта и запчасти в одном месте:</h2>
+        <div class="row">
+            <section class="col-sm-12 col-md-6">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service/сhassis.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <h3>Ремонт ходовой</h3>
+                <span>диагностика, замена запчастей, настройка подвески и т.д.</span>
+            </section>
+            <section class="col-sm-12 col-md-6">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service/electrician.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <h3>Ремонт электрики</h3>
+                <span>Устранение неисправностей, установка дополнительного оборудования</span>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-sm-12 col-md-6">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service/engine.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <h3>Ремонт двигателя</h3>
+                <span>дизельных и бензиновых моторов любого рабочего объема</span>
+            </section>
+            <section class="col-sm-12 col-md-6">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service/bus.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <h3>Шиномонтаж</h3>
+                <span>замена шин, балансировка колес, развал-схождение, подкачка колес</span>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-sm-12 col-md-6">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service/body.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <h3>Кузовные работы</h3>
+                <span>Восстановление авто после ДТП, сварочные и покрасочные работы</span>
+            </section>
+            <section class="col-sm-12 col-md-6">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service/polish.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <h3>Полировка кузова</h3>
+                <span>восстановление внешнего вида, устранение сколов и царапин</span>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-sm-12">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service/spares.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <h3>Автозапчасти</h3>
+                <span>замена любой детали по минимальной стоимости в городе</span>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="service-list">
+    <div class="container">
+        <h2>Все еще не решились отдать свое авто в сервис?</h2>
+        <div class="row">
+            <section class="col-sm-12 col-md-4">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service-list/time.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <span>Cоблюдение сроков ремонта автомобиля.</span>
+            </section>
+            <section class="col-sm-12 col-md-4">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service-list/security.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <span>
+                    <b>Полное восстановление геометрии кузова</b>
+                    и устранение внутренних повреждений автомобиля,
+                    возникших в результате ДТП
+                </span>
+            </section>
+            <section class="col-sm-12 col-md-4">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service-list/schedule.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <span>
+                    Мы работаем для вас <b>c 8:00 до 22:00</b>
+                    в неделю и готовы в любой момент рассчитать
+                    стоимость работ и провести ремонт вашего авто
+                </span>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-sm-12 col-md-6">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service-list/parking.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <span>Удобный подъезд и парковка к автосервису</span>
+            </section>
+            <section class="col-sm-12 col-md-6">
+                <?=Html::img(
+                        '@web'.$pathMainAsset.'/images/service-list/experts.png',
+                        ['class' => 'img-responsive','alt' => 'Наш логотип']
+                )?>
+                <span>
+                    Экспертная команда профессионалов - у нас работают только
+                    опытные мастера
+                </span>
+            </section>
+        </div>
+    </div>
 </div>
 
-<div class="advantages">
+
+<!--<div class="advantages">
     <div class="container">
         <h2>Почему 3000 наших клиентов выбрало нас??</h2>
         <div class="row">
@@ -193,95 +435,119 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
+
 <div class="services">
     <h2>Как мы работаем:</h2>
     <div class="wrap container">
-        <div class="hww_one hb s1 scale">
+        <div class="hr"></div>
+
+        <div class="o1"></div>
+        <div class="hww_one s1 scale">
+
             <div class="hww_text">
                 <span>ЗАЯВКА</span>
                 Вы оставляете заявку <br>на обратный звонок <br>или звоните нам сами
                 <a id="go" class="button-callback" rel="leanModal" name="makeorder" >Оставить заявку</a>
             </div>
+
         </div>
-        <div class="hww_one ht s2 scale">
-            <span>КОНСУЛЬТАЦИЯ</span>
-            Вы получаете от нашего специалиста<br>индивидуальное предложение, уточняете<br>сумму и сроки выполнения работ
+        <div class="o2"></div>
+        <div class="hww_one s2 scale">
+            <div class="hww_text">
+                <span>КОНСУЛЬТАЦИЯ</span>
+                Вы получаете от нашего специалиста<br>индивидуальное предложение, уточняете<br>сумму и сроки выполнения работ
+            </div>
+
         </div>
-        <div class="hww_one hb s3 scale">
-            <span>ОБРАЩЕНИЕ В POKRAS24</span>
-            Вы приезжаете в наш сервис, наш<br>специалист проводит осмотр автомобиля <br>и согласовывает стоимость работы
+        <div class="o3"></div>
+        <div class="hww_one s3 scale">
+
+            <div class="hww_text">
+                <span>ОБРАЩЕНИЕ В СЕРВИС</span>
+                Вы приезжаете в наш сервис, наш<br>специалист проводит осмотр автомобиля <br>и согласовывает стоимость работы
+            </div>
+
         </div>
-        <div class="hww_one ht s4 scale">
-            <span>РЕМОНТНЫЕ РАБОТЫ</span>
-            Мы проводим полный цикл<br>покрасочных и ремонтных<br>работ
+        <div class="o4"></div>
+        <div class="hww_one s4 scale">
+            <div class="hww_text">
+                <span>РЕМОНТНЫЕ РАБОТЫ</span>
+                Мы проводим полный цикл<br>покрасочных и ремонтных<br>работ
+            </div>
+
         </div>
-        <div class="hww_one hb s5 scale">
+        <div class="o5"></div>
+        <div class="hww_one s5 scale">
+            <div class="hww_text">
 				<span>АВТОМОБИЛЬ ГОТОВ!</span>
-            Покраска завершена!<br>Можете ехать!
+                Покраска завершена!<br>Можете ехать!
+            </div>
         </div>
     </div>
 </div>
-<div class="services">
-    <h2>Виды предоставляемых услуг:</h2>
-</div>
+-->
 
-<div class="reviews">
+<div id="reviews" class="reviews">
     <h2>Отзывы наших клиентов:</h2>
 
     <div class="wrap container">
-        <a name="reviews2"></a>
-        <div class="review r1 fade" style="opacity: 1;">
-            <div class="review_img"></div>
-            <img lass="review_img" src="<?Yii::$app->assetManager->getPublishedUrl('images/r1.png');?>">
-            <span>«Будет случай – обращусь к вам еще!»</span>
-            <p>Спасибо ребятам за отличную работу! Попал в аварию, разбил свою Audi, ужасная история!</p>
-            <p>Решился отдать на ремонт, очень переживал, боялся, что покрасят плохо, вкривь и вкось,<br>неудачно подберут цвет. <b>Результат очень порадовал, все сделали качественно и быстро.</b> Будет случай –<br>обращусь в Pokras24 еще! </p>
-            <p>Спасибо!</p>
-            <div class="review_name">
-                <div class="rn"></div>
-                <div class="rnn"></div>
-                <em>Эмиль Ворзаев, 43 года, Audi TT </em>
+        <div class="review">
+            <div class="row">
+                <div class="reviewImg col-sm-12 col-md-2">
+                    <?= Html::img('@web'.$pathMainAsset.'/images/r1.png',['alt' => 'Наш логотип'])?>
+                </div>
+                <div class="reviewText col-sm-12 col-md-10">
+                    <span>«Будет случай – обращусь к вам еще!»</span>
+                    <p>Спасибо ребятам за отличную работу! Попал в аварию, разбил свою Audi, ужасная история!</p>
+                    <p>Решился отдать на ремонт, очень переживал, боялся, что покрасят плохо, вкривь и вкось,<br>неудачно подберут цвет. <b>Результат очень порадовал, все сделали качественно и быстро.</b> Будет случай – обращусь к вам еще! </p>
+                    <p>Спасибо!</p>
+                    <div class="review_name"><em>Эмиль Ворзаев, Audi TT </em></div>
+                </div>
             </div>
         </div>
-        <a name="reviews3"></a>
-        <div class="review r2 fade" style="opacity: 1;">
-            <div class="review_img"></div>
-            <span>«Заплатил ровно ту сумму, которую назвали в начале...»</span>
-            <p>Весной решил обновить автомобиль – освежить цвет, убрать царапины по бокам.</p>
-            <p><b>После осмотра и диагностики авто назвали нормальную цену, я сразу согласился!</b> Покраска заняла всего три дня. Когда увидел машину, всё понравилось, заплатил ровно ту сумму, которую назвали в начале. Pokras24, спасибо за качественную работу!!!</p>
-            <div class="review_name">
-                <div class="rn"></div>
-                <div class="rnn"></div>
-                <em>Валентин Стародубов, 38 лет, Hyundai Accent</em>
+        <div class="review">
+            <div class="row">
+                <div class="reviewImg col-sm-12 col-md-2">
+                    <?= Html::img('@web'.$pathMainAsset.'/images/r2.png',['alt' => 'Наш логотип'])?>
+                </div>
+                <div class="reviewText col-sm-12 col-md-10">
+                    <span>«Заплатил ровно ту сумму, которую назвали в начале...»</span>
+                    <p>Весной решил обновить автомобиль – освежить цвет, убрать царапины по бокам.</p>
+                    <p><b>После осмотра и диагностики авто назвали нормальную цену, я сразу согласился!</b> Покраска заняла всего три дня. Когда увидел машину, всё понравилось, заплатил ровно ту сумму, которую назвали в начале. Спасибо за качественную работу!!!</p>
+                    <div class="review_name"><em>Валентин Стародубов, Hyundai Accent</em></div>
+                </div>
+
             </div>
         </div>
-        <a name="reviews4"></a>
-        <div class="review r3 fade" style="opacity: 1;">
-            <div class="review_img"></div>
-            <span>«Уже через 4 дня я забрала машину...»</span>
-            <p>Долго искала сервис для ремонта машины, большинство компаний предлагают свои услуги по завышенным ценам, да еще и качество работ оставляет желать лучшего. <b>Цены адекватные и качество работы на высоком уровне.</b>
-                Что порадовало – все сделали быстро, уже через 4 дня я забрала машину. </p>
-            <p>Обратилась по совету подруги и не жалею! </p>
-            <div class="review_name">
-                <div class="rn"></div>
-                <div class="rnn"></div>
-                <em>Елена Рислова, 35лет, Mazda 6</em>
+        <div class="review">
+            <div class="row">
+                <div class="reviewImg col-sm-12 col-md-2">
+                    <?=Html::img('@web'.$pathMainAsset.'/images/r3.png',['alt' => 'Наш логотип'])?>
+                </div>
+                <div class="reviewText col-sm-12 col-md-10">
+                    <span>«Уже через 4 дня я забрала машину...»</span>
+                    <p>Долго искала сервис для ремонта машины, большинство компаний предлагают свои услуги по завышенным ценам, да еще и качество работ оставляет желать лучшего. <b>Цены адекватные и качество работы на высоком уровне.</b>
+                        Что порадовало – все сделали быстро, уже через 4 дня я забрала машину. </p>
+                    <p>Обратилась по совету подруги и не жалею! </p>
+                    <div class="review_name"><em>Елена Рислова, Mazda 6</em></div>
+                </div>
             </div>
         </div>
-        <a name="reviews5"></a>
-        <div class="review r4 fade" style="opacity: 1;">
-            <div class="review_img"></div>
-            <span>«Не только провели полную покраску авто, но и помогли <br>подобрать новые дверь и зеркала...»</span>
-            <p>Ремонтировал свой Cорент – вся левая сторона была разбита, что называется, «в мясо». Ребята не только провели полную покраску авто, но и помогли подобрать новые дверь и зеркала. </p>
-            <p><b>Работой остался очень доволен, качество отличное, буду рекомендовать друзьям, спасибо!</b></p>
-            <div class="review_name">
-                <div class="rn"></div>
-                <div class="rnn"></div>
-                <em>Андрей Томилин, 27 лет, KIA Sorento</em>
+        <div class="review">
+            <div class="row">
+                <div class="reviewImg col-sm-12 col-md-2">
+                    <?= Html::img('@web'.$pathMainAsset.'/images/r4.png',['alt' => 'Наш логотип'])?>
+                </div>
+                <div class="reviewText col-sm-12 col-md-10">
+                    <span>«Не только провели полную покраску авто, но и помогли <br>подобрать новые дверь и зеркала...»</span>
+                    <p>Ремонтировал свой Cорент – вся левая сторона была разбита, что называется, «в мясо». Ребята не только провели полную покраску авто, но и помогли подобрать новые дверь и зеркала. </p>
+                    <p><b>Работой остался очень доволен, качество отличное, буду рекомендовать друзьям, спасибо!</b></p>
+                    <div class="review_name"><em>Андрей Томилин, KIA Sorento</em></div>
+                </div>
+
             </div>
         </div>
     </div>
-
 </div>
 
-<div class="map" style="width:500px; height:500px">></div>
+<div id="map" class="container-fluid" style="height:300px" ></div>

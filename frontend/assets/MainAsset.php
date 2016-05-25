@@ -18,6 +18,9 @@ class MainAsset extends AssetBundle
     ];
 
     public $js = [
+        'http://maps.google.com/maps/api/js',
+        'js/main.js',
+        'js/main-menu.js'
     ];
 
     public $depends = [
@@ -28,6 +31,7 @@ class MainAsset extends AssetBundle
     ];
 
     public $jsOptions = [
-        'position' => View::POS_HEAD
+        //'position' => View::POS_HEAD
+        'position' => View::POS_END
     ];
 }

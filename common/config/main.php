@@ -21,6 +21,13 @@ return [
         'assetManager' => [
             'linkAssets' => true,
             'appendTimestamp' => true,
+            /* переопределяем путь к assets bootsrap*/
+            'bundles' => [
+                    'yii\bootstrap\BootstrapAsset' => [
+                            'sourcePath' => null,
+                            'css' => ['frontend/web/css/bootstrap.css']
+                    ],
+            ]
         ],
         'mail' => [
             'class'            => 'zyx\phpmailer\Mailer',
@@ -36,6 +43,22 @@ return [
                 'password'   => '1q2w3eqaedws',
                 'ishtml' => true,
                 'charset' => 'UTF-8'
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                'app'=>[
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath'=>'@common/messages',
+                ],
+                '*'=> [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    'sourceMessageTable'=>'{{%i18n_source_message}}',
+                    'messageTable'=>'{{%i18n_message}}',
+                    'enableCaching' => YII_ENV_DEV,
+                    'cachingDuration' => 3600,
+                    'on missingTranslation' => ['\backend\modules\i18n\Module', 'missingTranslation']
+                ],
             ],
         ],
     ],

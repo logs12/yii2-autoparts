@@ -23,7 +23,8 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "zyx/zyx-phpmailer": "@stable",
         "kartik-v/yii2-widget-fileinput": "@dev",
-        "yiisoft/yii2-imagine": "~2.0.0"
+        "yiisoft/yii2-imagine": "~2.0.0",
+        "logs12/yii2-callback": "1.*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

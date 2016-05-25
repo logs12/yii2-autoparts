@@ -17,9 +17,10 @@ return [
         'main' => [
             'class' => 'app\modules\main\Module'
         ],
-        'callback' => [
-            'class' => 'app\modules\callback\Module',
+        'orderSpare' => [
+                'class' => 'frontend\modules\orderSpare\Module',
         ],
+
     ],
     'components' => [
         'user' => [
@@ -40,7 +41,7 @@ return [
         ],
         'request' => [
             'baseUrl' => ''
-        ],
+        ]
 
     ],
     'params' => $params,

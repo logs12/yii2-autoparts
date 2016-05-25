@@ -13,8 +13,11 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         'callback' => [
-            'class' => 'app\modules\callback\Callback',
+            'class' => 'backend\modules\callback\Module'
         ],
+        'i18n' => [
+            'class' => 'backend\modules\i18n\Module'
+        ]
     ],
     'components' => [
         'user' => [

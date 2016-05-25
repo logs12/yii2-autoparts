@@ -1,0 +1,28 @@
+#popap-spare{
+	.popap-spare-form{
+		padding-top:20px;
+	}
+	.nav-tabs > li {
+		float: left;
+		margin-bottom: -1px;
+		width: 50%;
+	}
+	.nav > li > a {
+		position: relative;
+		display: block;
+		padding: 10px 15px;
+		text-align: center;
+	}
+	.fa{
+		line-height: 34px;
+	}
+	form > div.required span{
+		color: red;
+	}
+	.loadImg{
+		width: 40px;
+		height: 40px;
+		display: block;
+		margin: 50px auto;
+	}
+}
